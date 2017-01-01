@@ -1,0 +1,14 @@
+DEPENDENCIES
+ bash >=4.0
+ bridge-utils
+ iproute2
+ systemd
+
+BUILDING
+ Setup the via a make.
+
+ $ make
+
+ Running a `make install` as root will distribute the files to the filesystem.
+
+ # make install
