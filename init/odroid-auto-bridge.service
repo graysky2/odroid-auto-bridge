@@ -1,6 +1,7 @@
 [Unit]
 Description=call iproute2 to make a bridge
-Before=network.target
+Before=network-pre.target
+Wants=network-pre.target
 
 [Service]
 Type=oneshot
@@ -9,4 +10,4 @@ ExecStart=/usr/bin/odroid-auto-bridge u
 ExecStop=/usr/bin/odroid-auto-bridge d
 
 [Install]
-WantedBy=default.target
+WantedBy=network.target
